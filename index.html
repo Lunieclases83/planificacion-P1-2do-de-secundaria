@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>2.º A Secundaria | Tecnología Educativa | P1</title>
+<style>
+:root{--navy:#102b4e;--gold:#d3a53a;--ink:#182433;--muted:#667085;--bg:#f5f7fb;--card:#fff;--ok:#1f7a4d;--warn:#a56500;--line:#dfe5ec}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
+header{background:linear-gradient(135deg,#0c2340,#183f6b);color:#fff;padding:28px 18px;border-bottom:5px solid var(--gold)}
+.hero{max-width:1180px;margin:auto;display:flex;gap:22px;align-items:center}.hero img{width:112px;height:112px;object-fit:contain;background:#fff;border-radius:18px;padding:8px}
+h1{font-size:clamp(1.55rem,4vw,2.35rem);margin:0 0 6px}.subtitle{opacity:.94}.teacher{color:#f5d981;font-weight:700}
+nav{position:sticky;top:0;z-index:4;background:#fff;border-bottom:1px solid var(--line);overflow:auto;white-space:nowrap;padding:10px;text-align:center}
+nav button{border:0;background:transparent;padding:9px 13px;font-weight:700;color:var(--navy);cursor:pointer;border-radius:8px}nav button:hover{background:#eef3f9}
+main{max-width:1180px;margin:22px auto;padding:0 16px}.section{display:none}.section.active{display:block}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;margin:0 0 18px;box-shadow:0 4px 18px rgba(16,43,78,.05)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}.pill{display:inline-block;padding:4px 9px;border-radius:999px;font-size:.82rem;font-weight:700}
+.done{background:#e6f5ed;color:var(--ok)}.pending{background:#fff3dc;color:var(--warn)}.close{background:#e9edf5;color:#445}
+.points{font-size:1.5rem;font-weight:800;color:var(--navy)}.gold{color:#9b7116}.progress{height:13px;background:#e6ebf1;border-radius:999px;overflow:hidden}.progress span{display:block;height:100%;width:30%;background:var(--gold)}
+table{width:100%;border-collapse:collapse;background:#fff}th,td{border:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}th{background:#eef3f9;color:var(--navy)}
+.seq{border-left:5px solid var(--gold)}.seq h3{margin-top:0}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.student{border-top:4px solid var(--gold)}details{background:#fafbfd;border:1px solid var(--line);border-radius:10px;padding:11px;margin:9px 0}summary{font-weight:700;cursor:pointer;color:var(--navy)}
+.btn{display:inline-block;border:0;border-radius:9px;background:var(--navy);color:#fff;padding:9px 12px;font-weight:700;cursor:pointer}.btn.secondary{background:#fff;color:var(--navy);border:1px solid var(--navy)}
+blockquote{margin:10px 0;padding:10px 14px;border-left:4px solid var(--gold);background:#fffaf0}
+footer{text-align:center;padding:26px;color:#667085}.small{font-size:.9rem;color:var(--muted)}
+@media print{nav,.no-print{display:none!important}body{background:#fff}.section{display:block!important}.card{box-shadow:none;break-inside:avoid}header{background:#fff;color:#000;border-bottom:2px solid #000}.teacher{color:#000}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hero">
+    <img src="assets/logo-cajpd.png" alt="Logo Colegio Adventista Juan Pablo Duarte">
+    <div>
+      <h1>Planificación de 2.º A de Secundaria – Tecnología Educativa</h1>
+      <div class="subtitle">Colegio Adventista Juan Pablo Duarte · Año escolar 2026–2027</div>
+      <div class="teacher">Docente: Mgtr. Marie Lunie Mercier</div>
+      <div>Período 1 · Organización y procesamiento de datos mediante hojas de cálculo</div>
+    </div>
+  </div>
+</header>
+
+<nav class="no-print">
+<button onclick="show('inicio')">Inicio</button>
+<button onclick="show('planificacion')">Planificación P1</button>
+<button onclick="show('secuencias')">Secuencias</button>
+<button onclick="show('estudiante')">Guía del estudiante</button>
+<button onclick="show('evaluacion')">Evaluación</button>
+<button onclick="show('instrumentos')">Instrumentos</button>
+<button onclick="show('seguimiento')">Seguimiento</button>
+</nav>
+
+<main>
+<section id="inicio" class="section active">
+  <div class="card">
+    <h2>Período 1 · De los datos a la información</h2>
+    <p>El estudiante aprende a recopilar, organizar y trasladar información a una hoja de cálculo, identificar sus elementos, dar formato a los datos y realizar cálculos mediante fórmulas y funciones básicas. La hoja de cálculo funciona como herramienta tecnológica para desarrollar aprendizajes vinculados con Matemática.</p>
+    <div class="grid">
+      <div class="card"><b>Duración</b><div class="points">90 min</div><span class="small">1 encuentro semanal</span></div>
+      <div class="card"><b>Evaluación</b><div class="points">100 pts</div><span class="small">P1 completo</span></div>
+      <div class="card"><b>Herramientas</b><div class="points">Sheets + Excel</div><span class="small">P1–P2</span></div>
+      <div class="card"><b>Proyecto</b><div class="points">25 pts</div><span class="small">De los datos a la información</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Estado de ejecución</h2>
+    <p><span class="pill done">S1–S3 impartidas</span> <span class="pill pending">S4–S7 pendientes</span> <span class="pill close">S8 cierre</span></p>
+    <div class="progress"><span></span></div>
+    <p class="small">30 puntos corresponden a evidencias de secuencias ya impartidas; la plataforma permite documentar planificación y ejecución real.</p>
+  </div>
+  <div class="card">
+    <h2>Filosofía educativa</h2>
+    <p>Cada encuentro integra un principio de la filosofía cristiana adventista mediante un texto bíblico y una conexión explícita con el aprendizaje tecnológico: veracidad, orden, excelencia, diligencia, sabiduría, responsabilidad y reflexión.</p>
+  </div>
+</section>
+
+<section id="planificacion" class="section">
+  <div class="card">
+    <h2>Planificación del Período 1</h2>
+    <p><b>Situación de aprendizaje:</b> Los estudiantes han recopilado información de su entorno y necesitan convertirla en datos organizados, localizables y procesables. Parten del registro manual en el cuaderno y progresan hacia el uso de Google Sheets/Microsoft Excel para estructurar, presentar y calcular información.</p>
+    <p><b>Integración curricular:</b> Matemática de 2.º de Secundaria, priorizando el uso de herramientas tecnológicas para organizar, procesar, calcular e interpretar información. La asignatura mantiene como propósito central el dominio de la herramienta tecnológica.</p>
+    <p><b>Estructura de cada encuentro:</b> Inicio 15 min · Desarrollo 60 min · Cierre 15 min.</p>
+    <p><b>Proyecto de P1:</b> <em>De los datos a la información</em>, una hoja de cálculo funcional construida a partir del proceso realizado desde S1.</p>
+    <button class="btn no-print" onclick="window.print()">Imprimir planificación</button>
+  </div>
+  <div class="card">
+    <h3>Mapa de secuencias</h3>
+    <table>
+      <tr><th>Secuencia</th><th>Aprendizaje / producto</th><th>Estado</th><th>Pts</th></tr>
+      <tr><td>S1</td><td>Recopilación de información</td><td>Impartida</td><td>10</td></tr>
+      <tr><td>S2</td><td>Organización de datos en tabla del cuaderno</td><td>Impartida</td><td>10</td></tr>
+      <tr><td>S3</td><td>Filas, columnas, celdas, referencias y rangos</td><td>Impartida</td><td>10</td></tr>
+      <tr><td>S4</td><td>Del cuaderno a la hoja digital</td><td>Próxima</td><td>15</td></tr>
+      <tr><td>S5</td><td>Organización y formato</td><td>Pendiente</td><td>15</td></tr>
+      <tr><td>S6</td><td>Fórmulas y funciones básicas</td><td>Pendiente</td><td>15</td></tr>
+      <tr><td>S7</td><td>Mini proyecto: De los datos a la información</td><td>Pendiente</td><td>25</td></tr>
+      <tr><td>S8</td><td>Revisión, retroalimentación y cierre</td><td>Cierre</td><td>0</td></tr>
+      <tr><th colspan="3">TOTAL</th><th>100</th></tr>
+    </table>
+  </div>
+</section>
+
+<section id="secuencias" class="section">
+  <div id="seqs"></div>
+</section>
+
+<section id="estudiante" class="section">
+  <div class="card student">
+    <h2>Mi ruta de aprendizaje · P1</h2>
+    <p>En este período aprenderás a transformar datos en una hoja de cálculo útil. Cada actividad construye la siguiente; por eso conservarás el mismo trabajo y lo irás mejorando.</p>
+    <div id="studentCards"></div>
+  </div>
+</section>
+
+<section id="evaluacion" class="section">
+  <div class="card">
+    <h2>Evaluación del Período 1 · 100 puntos</h2>
+    <table>
+      <tr><th>Evidencia</th><th>Instrumento</th><th>Valor</th></tr>
+      <tr><td>S1 Recopilación</td><td>Lista de cotejo</td><td>10</td></tr>
+      <tr><td>S2 Tabla en cuaderno</td><td>Lista de cotejo</td><td>10</td></tr>
+      <tr><td>S3 Identificación de elementos</td><td>Lista de cotejo práctica</td><td>10</td></tr>
+      <tr><td>S4 Tabla digital</td><td>Lista de cotejo</td><td>15</td></tr>
+      <tr><td>S5 Formato y organización</td><td>Lista de cotejo práctica</td><td>15</td></tr>
+      <tr><td>S6 Fórmulas y funciones</td><td>Escala de valoración práctica</td><td>15</td></tr>
+      <tr><td>S7 Mini proyecto</td><td>Rúbrica analítica</td><td>25</td></tr>
+      <tr><th colspan="2">TOTAL</th><th>100</th></tr>
+    </table>
+    <p class="small">S8 no agrega puntos: se utiliza para revisar evidencias, retroalimentar, realizar correcciones pertinentes y cerrar la calificación.</p>
+  </div>
+</section>
+
+<section id="instrumentos" class="section">
+  <div class="card">
+    <h2>Instrumentos imprimibles</h2>
+    <p>Los instrumentos están alineados con el valor de cada evidencia. Use el botón de impresión del navegador para imprimir esta sección o la plataforma completa.</p>
+    <div id="instrumentList"></div>
+    <button class="btn no-print" onclick="window.print()">Imprimir instrumentos</button>
+  </div>
+</section>
+
+<section id="seguimiento" class="section">
+  <div class="card">
+    <h2>Seguimiento de ejecución</h2>
+    <p>Vista para docente y coordinación. Los estados pueden modificarse en el código cuando avance el período.</p>
+    <table>
+      <tr><th>Secuencia</th><th>Planificada</th><th>Estado actual</th><th>Evidencia</th></tr>
+      <tr><td>S1</td><td>✓</td><td>✓ Impartida</td><td>Recopilación</td></tr>
+      <tr><td>S2</td><td>✓</td><td>✓ Impartida</td><td>Tabla en cuaderno</td></tr>
+      <tr><td>S3</td><td>✓</td><td>✓ Impartida</td><td>Práctica de ubicación</td></tr>
+      <tr><td>S4</td><td>✓</td><td>Próxima</td><td>Tabla digital</td></tr>
+      <tr><td>S5</td><td>✓</td><td>Pendiente</td><td>Hoja formateada</td></tr>
+      <tr><td>S6</td><td>✓</td><td>Pendiente</td><td>Cálculos</td></tr>
+      <tr><td>S7</td><td>✓</td><td>Pendiente</td><td>Proyecto final P1</td></tr>
+      <tr><td>S8</td><td>✓</td><td>Cierre</td><td>Ficha de retroalimentación</td></tr>
+    </table>
+  </div>
+</section>
+</main>
+
+<footer>Cortesía académica · Colegio Adventista Juan Pablo Duarte · Tecnología Educativa 2026–2027</footer>
+
+<script>
+const data=[
+["S1","Recopilamos información","10","Impartida","Proverbios 12:22","Veracidad y responsabilidad","Recopilar información pertinente y confiable.","Datos recopilados","Lista de cotejo",
+["Recopila la información solicitada — 2 pts","Selecciona datos pertinentes — 2 pts","Registra datos de manera comprensible — 2 pts","Mantiene orden — 2 pts","Responsabilidad y veracidad — 2 pts"],
+"Buscar, seleccionar y registrar la información que servirá de base para el trabajo del período."],
+["S2","Organizamos nuestros datos en una tabla","10","Impartida","1 Corintios 14:40","Orden, responsabilidad y excelencia","Transformar la información recopilada en una estructura de filas y columnas.","Tabla en el cuaderno","Lista de cotejo",
+["Organiza los datos en tabla — 2 pts","Encabezados apropiados — 2 pts","Ubicación correcta — 2 pts","Coherencia y claridad — 2 pts","Orden y responsabilidad — 2 pts"],
+"Organizar los datos por categorías utilizando filas, columnas y encabezados."],
+["S3","Conocemos la hoja de cálculo","10","Impartida","1 Corintios 14:40","Orden, precisión y responsabilidad","Reconocer libro, hoja, filas, columnas, celdas, referencias y rangos.","Práctica de identificación y ubicación","Lista de cotejo práctica",
+["Filas y columnas — 2 pts","Celda y referencia — 2 pts","Localiza una referencia — 2 pts","Selecciona un rango — 2 pts","Orden y seguimiento de instrucciones — 2 pts"],
+"Explorar la hoja de cálculo y resolver retos de localización de celdas y rangos."],
+["S4","Del cuaderno a la hoja digital","15","Próxima","Colosenses 3:23","Diligencia y excelencia","Trasladar correctamente los datos del cuaderno a una hoja de cálculo.","Tabla digital estructurada","Lista de cotejo",
+["Encabezados — 3 pts","Transferencia fiel de datos — 3 pts","Ubicación correcta — 3 pts","Estructura tabular — 2 pts","Corrección de errores — 2 pts","Orden y responsabilidad — 2 pts"],
+"Crear encabezados y trasladar cuidadosamente los datos del cuaderno a Google Sheets/Excel."],
+["S5","Organizamos y damos formato","15","Pendiente","Proverbios 22:29","Excelencia, orden y mayordomía","Aplicar formatos que mejoren la lectura y organización de los datos.","Hoja organizada y formateada","Lista de cotejo práctica",
+["Encabezados claros — 3 pts","Filas/columnas ajustadas — 2 pts","Formato según tipo de dato — 3 pts","Uso de rangos — 2 pts","Claridad funcional — 3 pts","Orden y cuidado — 2 pts"],
+"Mejorar encabezados, dimensiones, alineación, tipos de datos, rangos y legibilidad."],
+["S6","Hacemos que la hoja calcule","15","Pendiente","Proverbios 2:6","Sabiduría y uso responsable del conocimiento","Utilizar fórmulas, operadores y funciones básicas mediante referencias de celdas.","Hoja con cálculos","Escala de valoración práctica",
+["Fórmula con referencias — 3 pts","Operaciones aritméticas — 3 pts","Función adecuada — 3 pts","Rango correcto — 2 pts","Interpreta resultado — 2 pts","Precisión y autonomía — 2 pts"],
+"Aplicar +, -, *, / y funciones como SUMA, PROMEDIO, MÁX. y MÍN. cuando sean pertinentes."],
+["S7","Mini proyecto: De los datos a la información","25","Pendiente","Colosenses 3:23","Excelencia, responsabilidad y mayordomía","Integrar los aprendizajes del período en una hoja de cálculo funcional.","Proyecto final P1","Rúbrica analítica",
+["Organización y estructura — 5 pts","Exactitud y ubicación — 5 pts","Formato y legibilidad — 5 pts","Fórmulas/funciones — 5 pts","Revisión e interpretación — 5 pts"],
+"Completar, revisar y explicar una hoja de cálculo funcional construida durante el período."],
+["S8","Revisión, retroalimentación y cierre","0","Cierre","1 Tesalonicenses 5:21","Reflexión, responsabilidad y crecimiento","Revisar evidencias, recibir retroalimentación y realizar correcciones pertinentes.","Ficha de seguimiento","Ficha de retroalimentación",
+["Evidencia completa","Requiere corrección","Evidencia pendiente","Revisada","Observaciones y estado final"],
+"Revisar el trabajo del período, corregir lo necesario y reflexionar sobre los aprendizajes."]
+];
+
+function statusClass(s){return s==="Impartida"?"done":s==="Cierre"?"close":"pending"}
+document.getElementById("seqs").innerHTML=data.map(x=>`
+<div class="card seq">
+<div class="meta"><span class="pill ${statusClass(x[3])}">${x[3]}</span><span class="pill close">${x[2]} pts</span></div>
+<h3>${x[0]} · ${x[1]}</h3>
+<p><b>Propósito:</b> ${x[6]}</p>
+<blockquote><b>Filosofía adventista:</b> ${x[5]} · <b>${x[4]}</b></blockquote>
+<details><summary>Inicio · 15 min</summary><p>Devocional conectado con el principio de la clase, recuperación de saberes previos y presentación del reto o pregunta generadora.</p></details>
+<details><summary>Desarrollo · 60 min</summary><p>${x[10]} La docente modela, acompaña, observa el procedimiento y ofrece retroalimentación durante la práctica.</p></details>
+<details><summary>Cierre · 15 min</summary><p>Socialización o comprobación del aprendizaje, reflexión sobre lo realizado y conexión con la siguiente secuencia.</p></details>
+<p><b>Evidencia:</b> ${x[7]} · <b>Instrumento:</b> ${x[8]}</p>
+</div>`).join("");
+
+document.getElementById("studentCards").innerHTML=data.slice(0,7).map(x=>`
+<details><summary>${x[0]} · ${x[1]} — ${x[2]} pts</summary>
+<p><b>¿Qué aprenderé?</b> ${x[6]}</p>
+<p><b>¿Qué haré?</b> ${x[10]}</p>
+<p><b>¿Qué entregaré?</b> ${x[7]}.</p>
+<p><b>¿Cómo me evaluarán?</b> ${x[8]}. Los criterios están disponibles antes de realizar la actividad.</p>
+</details>`).join("");
+
+document.getElementById("instrumentList").innerHTML=data.map(x=>`
+<details><summary>${x[0]} · ${x[8]} ${x[2]!=="0"?"("+x[2]+" pts)":""}</summary>
+<table><tr><th>Criterio / indicador de revisión</th></tr>${x[9].map(c=>`<tr><td>${c}</td></tr>`).join("")}</table>
+</details>`).join("");
+
+function show(id){
+ document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
+ document.getElementById(id).classList.add("active");
+ window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+</body>
+</html>
