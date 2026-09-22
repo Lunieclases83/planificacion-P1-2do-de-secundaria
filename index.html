@@ -9,7 +9,7 @@
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
 header{background:linear-gradient(135deg,#0c2340,#183f6b);color:#fff;padding:28px 18px;border-bottom:5px solid var(--gold)}
 .hero{max-width:1180px;margin:auto;display:flex;gap:22px;align-items:center}.hero img{width:112px;height:112px;object-fit:contain;background:#fff;border-radius:18px;padding:8px}
-h1{font-size:clamp(1.55rem,4vw,2.35rem);margin:0 0 6px}.subtitle{opacity:.94}.teacher{color:#f5d981;font-weight:700}
+h1{font-size:clamp(1.45rem,3vw,2.05rem);margin:0 0 6px;line-height:1.15}.subtitle{opacity:.94}.teacher{color:#f5d981;font-weight:700}
 nav{position:sticky;top:0;z-index:4;background:#fff;border-bottom:1px solid var(--line);overflow:auto;white-space:nowrap;padding:10px;text-align:center}
 nav button{border:0;background:transparent;padding:9px 13px;font-weight:700;color:var(--navy);cursor:pointer;border-radius:8px}nav button:hover{background:#eef3f9}
 main{max-width:1180px;margin:22px auto;padding:0 16px}.section{display:none}.section.active{display:block}
@@ -77,9 +77,27 @@ footer{text-align:center;padding:26px;color:#667085}.small{font-size:.9rem;color
   <div class="card">
     <h2>Planificación del Período 1</h2>
     <p><b>Situación de aprendizaje:</b> Los estudiantes han recopilado información de su entorno y necesitan convertirla en datos organizados, localizables y procesables. Parten del registro manual en el cuaderno y progresan hacia el uso de Google Sheets/Microsoft Excel para estructurar, presentar y calcular información.</p>
-    <p><b>Integración curricular:</b> Matemática de 2.º de Secundaria, priorizando el uso de herramientas tecnológicas para organizar, procesar, calcular e interpretar información. La asignatura mantiene como propósito central el dominio de la herramienta tecnológica.</p>
+    <p><b>Integración curricular:</b> Matemática de 2.º de Secundaria. La hoja de cálculo se utiliza como herramienta tecnológica para organizar, procesar, calcular e interpretar información, manteniendo como propósito central el aprendizaje tecnológico.</p>
+    <div class="grid">
+      <div class="card"><b>Competencia fundamental priorizada</b><p>Científica y Tecnológica.</p></div>
+      <div class="card"><b>Competencia específica de Matemática · 2.º</b><p>Aplica herramientas tecnológicas para la resolución e interpretación de problemas del entorno y a partir de los conocimientos matemáticos que posee.</p></div>
+    </div>
+    <h3>Criterios curriculares vinculados</h3>
+    <ul>
+      <li>Resolución e interpretación de situaciones del entorno con apoyo de herramientas tecnológicas y conocimientos matemáticos.</li>
+      <li>Uso de razonamiento, cálculo y representación de información para verificar resultados.</li>
+      <li>Rigor, disciplina, autonomía y respeto por diferentes procedimientos de solución.</li>
+    </ul>
+    <h3>Contenidos movilizados en P1</h3>
+    <table>
+      <tr><th>Conceptuales / matemáticos</th><th>Procedimentales</th><th>Actitudes y valores</th></tr>
+      <tr><td>Datos, organización tabular, operaciones y tratamiento de información.</td><td>Recopilar, clasificar, registrar, organizar, calcular, comprobar e interpretar información mediante hoja de cálculo.</td><td>Orden, precisión, responsabilidad, rigor, autonomía, veracidad y valoración del uso responsable de la tecnología.</td></tr>
+    </table>
+    <p><b>Estrategias:</b> recuperación de experiencias previas, demostración guiada, aprendizaje basado en tareas y pequeños proyectos, resolución de problemas, práctica individual, revisión entre pares, retroalimentación y autoevaluación.</p>
+    <p><b>Recursos:</b> computadora, conexión a Internet, Google Sheets, Microsoft Excel, cuaderno, datos recopilados por los estudiantes, proyector/pantalla y plataforma educativa.</p>
     <p><b>Estructura de cada encuentro:</b> Inicio 15 min · Desarrollo 60 min · Cierre 15 min.</p>
     <p><b>Proyecto de P1:</b> <em>De los datos a la información</em>, una hoja de cálculo funcional construida a partir del proceso realizado desde S1.</p>
+    <p class="small"><b>Referencia curricular:</b> Adecuación Curricular del Nivel Secundario 2023, MINERD · Área de Matemática · Primer Ciclo · 2.º grado.</p>
     <button class="btn no-print" onclick="window.print()">Imprimir planificación</button>
   </div>
   <div class="card">
@@ -143,15 +161,15 @@ footer{text-align:center;padding:26px;color:#667085}.small{font-size:.9rem;color
     <h2>Seguimiento de ejecución</h2>
     <p>Vista para docente y coordinación. Los estados pueden modificarse en el código cuando avance el período.</p>
     <table>
-      <tr><th>Secuencia</th><th>Planificada</th><th>Estado actual</th><th>Evidencia</th></tr>
-      <tr><td>S1</td><td>✓</td><td>✓ Impartida</td><td>Recopilación</td></tr>
-      <tr><td>S2</td><td>✓</td><td>✓ Impartida</td><td>Tabla en cuaderno</td></tr>
-      <tr><td>S3</td><td>✓</td><td>✓ Impartida</td><td>Práctica de ubicación</td></tr>
-      <tr><td>S4</td><td>✓</td><td>Próxima</td><td>Tabla digital</td></tr>
-      <tr><td>S5</td><td>✓</td><td>Pendiente</td><td>Hoja formateada</td></tr>
-      <tr><td>S6</td><td>✓</td><td>Pendiente</td><td>Cálculos</td></tr>
-      <tr><td>S7</td><td>✓</td><td>Pendiente</td><td>Proyecto final P1</td></tr>
-      <tr><td>S8</td><td>✓</td><td>Cierre</td><td>Ficha de retroalimentación</td></tr>
+      <tr><th>Secuencia</th><th>Planificada</th><th>Impartida</th><th>Evaluada</th><th>Evidencia</th></tr>
+      <tr><td>S1</td><td>✓</td><td>✓</td><td>Por registrar</td><td>Recopilación</td></tr>
+      <tr><td>S2</td><td>✓</td><td>✓</td><td>Por registrar</td><td>Tabla en cuaderno</td></tr>
+      <tr><td>S3</td><td>✓</td><td>✓</td><td>Por registrar</td><td>Práctica de ubicación</td></tr>
+      <tr><td>S4</td><td>✓</td><td>Próxima</td><td>—</td><td>Tabla digital</td></tr>
+      <tr><td>S5</td><td>✓</td><td>Pendiente</td><td>—</td><td>Hoja formateada</td></tr>
+      <tr><td>S6</td><td>✓</td><td>Pendiente</td><td>—</td><td>Cálculos</td></tr>
+      <tr><td>S7</td><td>✓</td><td>Pendiente</td><td>—</td><td>Proyecto final P1</td></tr>
+      <tr><td>S8</td><td>✓</td><td>Cierre</td><td>—</td><td>Ficha de retroalimentación</td></tr>
     </table>
   </div>
 </section>
@@ -192,8 +210,9 @@ document.getElementById("seqs").innerHTML=data.map(x=>`
 <div class="card seq">
 <div class="meta"><span class="pill ${statusClass(x[3])}">${x[3]}</span><span class="pill close">${x[2]} pts</span></div>
 <h3>${x[0]} · ${x[1]}</h3>
-<p><b>Propósito:</b> ${x[6]}</p>
-<blockquote><b>Filosofía adventista:</b> ${x[5]} · <b>${x[4]}</b></blockquote>
+<p><b>Propósito tecnológico:</b> ${x[6]}</p>
+<p><b>Articulación curricular:</b> Competencia Científica y Tecnológica de Matemática: uso de herramientas tecnológicas para resolver e interpretar situaciones a partir de conocimientos matemáticos. La secuencia moviliza organización, cálculo, comprobación o interpretación de datos según corresponda.</p>
+<blockquote><b>Filosofía adventista:</b> ${x[5]} · <b>${x[4]}</b><br><span class="small">La reflexión bíblica se conecta explícitamente con la práctica tecnológica de la sesión.</span></blockquote>
 <details><summary>Inicio · 15 min</summary><p>Devocional conectado con el principio de la clase, recuperación de saberes previos y presentación del reto o pregunta generadora.</p></details>
 <details><summary>Desarrollo · 60 min</summary><p>${x[10]} La docente modela, acompaña, observa el procedimiento y ofrece retroalimentación durante la práctica.</p></details>
 <details><summary>Cierre · 15 min</summary><p>Socialización o comprobación del aprendizaje, reflexión sobre lo realizado y conexión con la siguiente secuencia.</p></details>
@@ -208,9 +227,15 @@ document.getElementById("studentCards").innerHTML=data.slice(0,7).map(x=>`
 <p><b>¿Cómo me evaluarán?</b> ${x[8]}. Los criterios están disponibles antes de realizar la actividad.</p>
 </details>`).join("");
 
-document.getElementById("instrumentList").innerHTML=data.map(x=>`
-<details><summary>${x[0]} · ${x[8]} ${x[2]!=="0"?"("+x[2]+" pts)":""}</summary>
-<table><tr><th>Criterio / indicador de revisión</th></tr>${x[9].map(c=>`<tr><td>${c}</td></tr>`).join("")}</table>
+document.getElementById("instrumentList").innerHTML=data.map((x,i)=>`
+<details id="inst-${i}"><summary>${x[0]} · ${x[8]} ${x[2]!=="0"?"("+x[2]+" pts)":""}</summary>
+<div class="instrument">
+<p><b>Colegio Adventista Juan Pablo Duarte</b><br>Tecnología Educativa · 2.º A de Secundaria<br>Docente: Mgtr. Marie Lunie Mercier</p>
+<p>Estudiante: ____________________________________ &nbsp;&nbsp; Fecha: ______________</p>
+<table><tr><th>Criterio / indicador de revisión</th><th>Valor / estado</th></tr>${x[9].map(c=>`<tr><td>${c}</td><td>________</td></tr>`).join("")}</table>
+<p><b>Puntuación obtenida:</b> ______ / ${x[2]} ${x[2]!=="0"?"puntos":""}</p>
+<p><b>Observaciones:</b> ____________________________________________________________________</p>
+</div>
 </details>`).join("");
 
 function show(id){
