@@ -22,6 +22,8 @@ table{width:100%;border-collapse:collapse;background:#fff}th,td{border:1px solid
 .student{border-top:4px solid var(--gold)}details{background:#fafbfd;border:1px solid var(--line);border-radius:10px;padding:11px;margin:9px 0}summary{font-weight:700;cursor:pointer;color:var(--navy)}
 .btn{display:inline-block;border:0;border-radius:9px;background:var(--navy);color:#fff;padding:9px 12px;font-weight:700;cursor:pointer}.btn.secondary{background:#fff;color:var(--navy);border:1px solid var(--navy)}
 blockquote{margin:10px 0;padding:10px 14px;border-left:4px solid var(--gold);background:#fffaf0}
+select,input{font:inherit;border:1px solid var(--line);border-radius:8px;padding:8px;background:#fff;color:var(--ink);min-width:145px}
+input{width:100%;min-width:190px}select:focus,input:focus{outline:2px solid rgba(211,165,58,.35);border-color:var(--gold)}
 footer{text-align:center;padding:26px;color:#667085}.small{font-size:.9rem;color:var(--muted)}
 @media print{nav,.no-print{display:none!important}body{background:#fff}.section{display:block!important}.card{box-shadow:none;break-inside:avoid}header{background:#fff;color:#000;border-bottom:2px solid #000}.teacher{color:#000}}
 </style>
@@ -157,22 +159,19 @@ footer{text-align:center;padding:26px;color:#667085}.small{font-size:.9rem;color
 </section>
 
 <section id="seguimiento" class="section">
-  <div class="card">
-    <h2>Seguimiento de ejecución</h2>
-    <p>Vista para docente y coordinación. Los estados pueden modificarse en el código cuando avance el período.</p>
-    <table>
-      <tr><th>Secuencia</th><th>Planificada</th><th>Impartida</th><th>Evaluada</th><th>Evidencia</th></tr>
-      <tr><td>S1</td><td>✓</td><td>✓</td><td>Por registrar</td><td>Recopilación</td></tr>
-      <tr><td>S2</td><td>✓</td><td>✓</td><td>Por registrar</td><td>Tabla en cuaderno</td></tr>
-      <tr><td>S3</td><td>✓</td><td>✓</td><td>Por registrar</td><td>Práctica de ubicación</td></tr>
-      <tr><td>S4</td><td>✓</td><td>Próxima</td><td>—</td><td>Tabla digital</td></tr>
-      <tr><td>S5</td><td>✓</td><td>Pendiente</td><td>—</td><td>Hoja formateada</td></tr>
-      <tr><td>S6</td><td>✓</td><td>Pendiente</td><td>—</td><td>Cálculos</td></tr>
-      <tr><td>S7</td><td>✓</td><td>Pendiente</td><td>—</td><td>Proyecto final P1</td></tr>
-      <tr><td>S8</td><td>✓</td><td>Cierre</td><td>—</td><td>Ficha de retroalimentación</td></tr>
-    </table>
-  </div>
-</section>
+<div class="card">
+<h2>Seguimiento de ejecución</h2>
+<p>Panel editable para uso docente. Seleccione el estado de cada secuencia y de su evidencia. Los cambios se guardan automáticamente en este navegador.</p>
+<div class="no-print" style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+<button class="btn secondary" onclick="exportTracking()">Descargar seguimiento</button>
+<button class="btn secondary" onclick="resetTracking()">Restablecer seguimiento</button>
+</div>
+<div style="overflow-x:auto"><table id="trackingTable">
+<tr><th>Secuencia</th><th>Planificada</th><th>Ejecución</th><th>Evaluación / evidencia</th><th>Observaciones</th></tr>
+<tr><td>S1</td><td>✓</td><td><select data-key="S1-exec"></select></td><td><select data-key="S1-eval"></select></td><td><input data-key="S1-note" placeholder="Escriba una nota…"></td></tr><tr><td>S2</td><td>✓</td><td><select data-key="S2-exec"></select></td><td><select data-key="S2-eval"></select></td><td><input data-key="S2-note" placeholder="Escriba una nota…"></td></tr><tr><td>S3</td><td>✓</td><td><select data-key="S3-exec"></select></td><td><select data-key="S3-eval"></select></td><td><input data-key="S3-note" placeholder="Escriba una nota…"></td></tr><tr><td>S4</td><td>✓</td><td><select data-key="S4-exec"></select></td><td><select data-key="S4-eval"></select></td><td><input data-key="S4-note" placeholder="Escriba una nota…"></td></tr><tr><td>S5</td><td>✓</td><td><select data-key="S5-exec"></select></td><td><select data-key="S5-eval"></select></td><td><input data-key="S5-note" placeholder="Escriba una nota…"></td></tr><tr><td>S6</td><td>✓</td><td><select data-key="S6-exec"></select></td><td><select data-key="S6-eval"></select></td><td><input data-key="S6-note" placeholder="Escriba una nota…"></td></tr><tr><td>S7</td><td>✓</td><td><select data-key="S7-exec"></select></td><td><select data-key="S7-eval"></select></td><td><input data-key="S7-note" placeholder="Escriba una nota…"></td></tr><tr><td>S8</td><td>✓</td><td><select data-key="S8-exec"></select></td><td><select data-key="S8-eval"></select></td><td><input data-key="S8-note" placeholder="Escriba una nota…"></td></tr>
+</table></div>
+<p class="small"><b>Guardado automático:</b> la información permanece en este navegador y equipo. No modifica el código de GitHub. Para conservar una copia externa, use “Descargar seguimiento”.</p>
+</div></section>
 </main>
 
 <footer>Cortesía académica · Colegio Adventista Juan Pablo Duarte · Tecnología Educativa 2026–2027</footer>
@@ -237,6 +236,38 @@ document.getElementById("instrumentList").innerHTML=data.map((x,i)=>`
 <p><b>Observaciones:</b> ____________________________________________________________________</p>
 </div>
 </details>`).join("");
+
+
+const execOptions=["Pendiente","Próxima","Impartida","Requiere corrección","Cerrada"];
+const evalOptions=["Por registrar","Evidencia pendiente","Incompleta","Completa","Revisada","Evaluada"];
+const defaults={"S1-exec":"Impartida","S2-exec":"Impartida","S3-exec":"Impartida","S4-exec":"Próxima","S5-exec":"Pendiente","S6-exec":"Pendiente","S7-exec":"Pendiente","S8-exec":"Cerrada","S1-eval":"Por registrar","S2-eval":"Por registrar","S3-eval":"Por registrar","S4-eval":"Evidencia pendiente","S5-eval":"Evidencia pendiente","S6-eval":"Evidencia pendiente","S7-eval":"Evidencia pendiente","S8-eval":"Por registrar"};
+function storageKey(k){return "cajpd-2A-p1-"+k}
+document.querySelectorAll('#trackingTable select').forEach(sel=>{
+ const key=sel.dataset.key, opts=key.endsWith("-exec")?execOptions:evalOptions;
+ sel.innerHTML=opts.map(o=>`<option value="${o}">${o}</option>`).join("");
+ sel.value=localStorage.getItem(storageKey(key)) || defaults[key] || opts[0];
+ sel.addEventListener("change",()=>localStorage.setItem(storageKey(key),sel.value));
+});
+document.querySelectorAll('#trackingTable input').forEach(inp=>{
+ const key=inp.dataset.key; inp.value=localStorage.getItem(storageKey(key)) || "";
+ inp.addEventListener("input",()=>localStorage.setItem(storageKey(key),inp.value));
+});
+function resetTracking(){
+ if(!confirm("¿Desea restablecer el seguimiento a los valores iniciales?")) return;
+ document.querySelectorAll('#trackingTable [data-key]').forEach(el=>localStorage.removeItem(storageKey(el.dataset.key)));
+ location.reload();
+}
+function exportTracking(){
+ let rows=["Secuencia,Ejecución,Evaluación/Evidencia,Observaciones"];
+ for(let i=1;i<=8;i++){
+  const ex=document.querySelector(`[data-key="S${i}-exec"]`).value;
+  const ev=document.querySelector(`[data-key="S${i}-eval"]`).value;
+  const no=document.querySelector(`[data-key="S${i}-note"]`).value.replaceAll('"','""');
+  rows.push(`S${i},"${ex}","${ev}","${no}"`);
+ }
+ const blob=new Blob(["\ufeff"+rows.join("\n")],{type:"text/csv;charset=utf-8"});
+ const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download="seguimiento_2A_periodo1.csv"; a.click(); URL.revokeObjectURL(a.href);
+}
 
 function show(id){
  document.querySelectorAll(".section").forEach(s=>s.classList.remove("active"));
